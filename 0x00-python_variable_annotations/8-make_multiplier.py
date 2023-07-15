@@ -16,17 +16,17 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
         Callable[[float], float]: a function that returns a float of the
         argument.
     """
-    def wrapper(multiplier: float) -> float:
+    def wrapper(x: float) -> float:
         """
             wrapper: this is a function wrapper that returns the
             sqaured value of it parameter
 
         Args:
-            multiplier (float): float argument
+            x (float): float argument
 
         Returns:
             float: returns squared arg
         """
-        return multiplier**2
+        return multiplier * x
 
     return wrapper
