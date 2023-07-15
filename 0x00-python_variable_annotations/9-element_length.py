@@ -6,7 +6,7 @@ from typing import Sequence, Iterable
 from typing import Tuple, List
 
 
-def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence[int]]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
         element_length: returns a list of index and item.
 
