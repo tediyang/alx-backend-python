@@ -18,6 +18,6 @@ async def measure_runtime() -> float:
             yielded 10 times.
     """
     start = time.perf_counter()
-    await asyncio.gather(comp(), comp(), comp(), comp())
+    await asyncio.gather(*(comp() for _ in range(4)))
     end = time.perf_counter()
     return end - start
