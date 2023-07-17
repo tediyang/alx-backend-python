@@ -3,6 +3,7 @@
     measure the runtime of the async function
 """
 import time
+import asyncio
 
 wait_n = __import__('1-concurrent_coroutines').wait_n
 
@@ -19,6 +20,6 @@ def measure_time(n: int, max_delay: int) -> float:
             int: returns the average time.
     """
     start = time.perf_counter()
-    wait_n(n, max_delay)
+    asyncio.run(wait_n(n, max_delay))
     end = time.perf_counter()
-    return (end - start) / n    
+    return (end - start) / n
