@@ -11,11 +11,11 @@ class TestAccessNestedMap(unittest.TestCase):
     """
         a class that test the accessnestedmap function from utils
     Args:
-        unittest (_type_): _description_
+        unittest (object): Unittest base
     """
     @parameterized.expand([
         ({"a": 1}, ("a",), 1),
-        ({"a": {"b": 2}}, ("a",), 2),
+        ({"a": {"b": 2}}, ("a",), {"b": 2}),
         ({"a": {"b": 2}}, ("a", "b"), 2),
     ])
     def test_access_nested_map(self, nested, path, expected):
