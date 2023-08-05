@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-    unittest for utils.access_nested_map function using parameterized
+    unittest for utils module using parameterized
 """
 import unittest
 from unittest.mock import patch
