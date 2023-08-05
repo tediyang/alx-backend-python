@@ -5,8 +5,8 @@
 import unittest
 from unittest.mock import patch, PropertyMock
 from parameterized import parameterized, parameterized_class
+from fixtures import TEST_PAYLOAD
 from client import GithubOrgClient
-from utils import get_json
 
 
 class TestGithubOrgClient(unittest.TestCase):
